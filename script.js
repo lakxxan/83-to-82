@@ -14,6 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.add('hidden');
         });
     });
+
+    // Add to your script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const firstBg = document.querySelector('#home div:first-child');
+  const secondBg = document.querySelector('#home div:nth-child(2)');
+  
+  // Transition every 5 seconds
+  setInterval(() => {
+    firstBg.classList.toggle('opacity-0');
+    firstBg.classList.toggle('opacity-100');
+    secondBg.classList.toggle('opacity-0');
+    secondBg.classList.toggle('opacity-100');
+  }, 5000);
+});
     
     // Gallery modal functionality
     const galleryItems = document.querySelectorAll('.gallery-item');
